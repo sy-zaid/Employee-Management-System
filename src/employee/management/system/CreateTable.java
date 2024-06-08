@@ -28,7 +28,7 @@ public class CreateTable {
                     "email VARCHAR(255), " +
                     "education VARCHAR(50), " +
                     "designation VARCHAR(50), " +
-                    "aadhar VARCHAR(20), " +
+                    "CNIC VARCHAR(20), " +
                     "empId VARCHAR(10) PRIMARY KEY)";
             stmt.executeUpdate(createSql);
 

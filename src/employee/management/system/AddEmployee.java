@@ -13,7 +13,7 @@ public class AddEmployee extends JFrame implements ActionListener{
     Random ran = new Random();
     int number = ran.nextInt(999999);
     
-    JTextField tfname, tffname, tfaddress, tfphone, tfaadhar, tfemail, tfsalary, tfdesignation;
+    JTextField tfname, tffname, tfaddress, tfphone, tfCNIC, tfemail, tfsalary, tfdesignation;
     JDateChooser dcdob;
     JComboBox cbeducation;
     JLabel lblempId;
@@ -111,14 +111,14 @@ public class AddEmployee extends JFrame implements ActionListener{
         tfdesignation.setBounds(200, 350, 150, 30);
         add(tfdesignation);
         
-        JLabel labelaadhar = new JLabel("Aadhar Number");
-        labelaadhar.setBounds(400, 350, 150, 30);
-        labelaadhar.setFont(new Font("serif", Font.PLAIN, 20));
-        add(labelaadhar);
+        JLabel labelCNIC = new JLabel("CNIC Number");
+        labelCNIC.setBounds(400, 350, 150, 30);
+        labelCNIC.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelCNIC);
         
-        tfaadhar = new JTextField();
-        tfaadhar.setBounds(600, 350, 150, 30);
-        add(tfaadhar);
+        tfCNIC = new JTextField();
+        tfCNIC.setBounds(600, 350, 150, 30);
+        add(tfCNIC);
         
         JLabel labelempId = new JLabel("Employee id");
         labelempId.setBounds(50, 400, 150, 30);
@@ -160,7 +160,7 @@ public class AddEmployee extends JFrame implements ActionListener{
             String email = tfemail.getText();
             String education = (String) cbeducation.getSelectedItem();
             String designation = tfdesignation.getText();
-            String aadhar = tfaadhar.getText();
+            String CNIC = tfCNIC.getText();
             String empId = lblempId.getText();
             // Converting date format
             SimpleDateFormat originalDateFormat = new SimpleDateFormat("MMM d, yyyy");
@@ -175,7 +175,7 @@ public class AddEmployee extends JFrame implements ActionListener{
             
             try {
                 Conn conn = new Conn();
-                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dobFormatted+"', '"+salary+"', '"+address+"', '"+phone+"', '"+email+"', '"+education+"', '"+designation+"', '"+aadhar+"', '"+empId+"')";
+                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dobFormatted+"', '"+salary+"', '"+address+"', '"+phone+"', '"+email+"', '"+education+"', '"+designation+"', '"+CNIC+"', '"+empId+"')";
                 conn.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null, "Details added successfully");
                 setVisible(false);

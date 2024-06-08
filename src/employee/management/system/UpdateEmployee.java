@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class UpdateEmployee extends JFrame implements ActionListener{
     
-    JTextField tfeducation, tffname, tfaddress, tfphone, tfaadhar, tfemail, tfsalary, tfdesignation;
+    JTextField tfeducation, tffname, tfaddress, tfphone, tfCNIC, tfemail, tfsalary, tfdesignation;
     JLabel lblempId;
     JButton add, back;
     String empId;
@@ -103,14 +103,14 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         tfdesignation.setBounds(200, 350, 150, 30);
         add(tfdesignation);
         
-        JLabel labelaadhar = new JLabel("Aadhar Number");
-        labelaadhar.setBounds(400, 350, 150, 30);
-        labelaadhar.setFont(new Font("serif", Font.PLAIN, 20));
-        add(labelaadhar);
+        JLabel labelCNIC = new JLabel("CNIC Number");
+        labelCNIC.setBounds(400, 350, 150, 30);
+        labelCNIC.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelCNIC);
         
-        JLabel lblaadhar = new JLabel();
-        lblaadhar.setBounds(600, 350, 150, 30);
-        add(lblaadhar);
+        JLabel lblCNIC = new JLabel();
+        lblCNIC.setBounds(600, 350, 150, 30);
+        add(lblCNIC);
         
         JLabel labelempId = new JLabel("Employee id");
         labelempId.setBounds(50, 400, 150, 30);
@@ -135,7 +135,7 @@ public class UpdateEmployee extends JFrame implements ActionListener{
                 tfphone.setText(rs.getString("phone"));
                 tfemail.setText(rs.getString("email"));
                 tfeducation.setText(rs.getString("education"));
-                lblaadhar.setText(rs.getString("aadhar"));
+                lblCNIC.setText(rs.getString("CNIC"));
                 lblempId.setText(rs.getString("empId"));
                 tfdesignation.setText(rs.getString("designation"));
                 
