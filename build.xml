@@ -1,0 +1,36 @@
+<project name="EmployeeManagementSystem" basedir="." default="run">
+
+    <!-- Property definitions -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="lib.dir" value="lib"/>
+
+    <!-- Classpath definition -->
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="h2-2.1.214.jar"/>
+            <!-- Include other necessary JARs -->
+        </fileset>
+    </path>
+
+    <!-- Clean task -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Compile task -->
+    <target name="compile" depends="clean">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath"/>
+    </target>
+
+    <!-- Run task -->
+    <target name="run" depends="compile">
+        <java classname="employee.management.system.Main" fork="true" classpathref="classpath">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+</project>
