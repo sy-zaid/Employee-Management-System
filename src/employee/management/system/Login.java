@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class Login extends JFrame implements ActionListener{
+public class Login extends JFrame implements ActionListener {
 
     JTextField tfusername, tfpassword;
 
@@ -14,17 +14,17 @@ public class Login extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
 
-        JLabel lblusername = new JLabel("Username");
-        lblusername.setBounds(40, 20, 100, 30);
-        add(lblusername);
+        JLabel label_username = new JLabel("Username");
+        label_username.setBounds(40, 20, 100, 30);
+        add(label_username);
 
         tfusername = new JTextField();
         tfusername.setBounds(150, 20, 150, 30);
         add(tfusername);
 
-        JLabel lblpassword = new JLabel("Password");
-        lblpassword.setBounds(40, 70, 100, 30);
-        add(lblpassword);
+        JLabel label_password = new JLabel("Password");
+        label_password.setBounds(40, 70, 100, 30);
+        add(label_password);
 
         tfpassword = new JTextField();
         tfpassword.setBounds(150, 70, 150, 30);
@@ -55,7 +55,7 @@ public class Login extends JFrame implements ActionListener{
             String password = tfpassword.getText();
 
             Conn c = new Conn();
-            String query = "select * from login where username = '"+username+"' and password = '"+password+"'";
+            String query = "select * from login where username = '" + username + "' and password = '" + password + "'";
 
             ResultSet rs = c.s.executeQuery(query);
             if (rs.next()) {

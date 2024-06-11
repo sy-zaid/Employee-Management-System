@@ -2,13 +2,15 @@ package employee.management.system;
 
 import java.awt.*;
 import javax.swing.*;
+
 import com.toedter.calendar.JDateChooser;
+
 import java.util.*;
 import java.awt.event.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class AddEmployee extends JFrame implements ActionListener{
+public class AddEmployee extends JFrame implements ActionListener {
 
     Random ran = new Random();
     int number = ran.nextInt(999999);
@@ -175,7 +177,7 @@ public class AddEmployee extends JFrame implements ActionListener{
 
             try {
                 Conn conn = new Conn();
-                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dobFormatted+"', '"+salary+"', '"+address+"', '"+phone+"', '"+email+"', '"+education+"', '"+designation+"', '"+cnic+"', '"+empId+"')";
+                String query = "insert into employee values('" + name + "', '" + fname + "', '" + dobFormatted + "', '" + salary + "', '" + address + "', '" + phone + "', '" + email + "', '" + education + "', '" + designation + "', '" + cnic + "', '" + empId + "')";
                 conn.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null, "Details added successfully");
                 setVisible(false);
