@@ -7,24 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="src" level="project" />
-    <orderEntry type="module-library">
-      <library name="jcalendar">
-        <CLASSES />
-        <JAVADOC>
-          <root url="file://D:/ALL SETUPS/jcalendar/doc/api" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="file://D:/ALL SETUPS/jcalendar" />
-          <root url="file://D:/ALL SETUPS/jcalendar/src" />
-        </SOURCES>
-        <jarDirectory url="file://D:/ALL SETUPS/jcalendar" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/ALL SETUPS/jcalendar/lib/jcalendar-1.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Java Libraries jar files/apache-ant-1.10.14-bin.zip!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -33,18 +19,38 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/ALL SETUPS/Java Libraries jar files/rs2xml.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Java Libraries jar files/h2-2.2.224.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Java Libraries jar files/rs2xml.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://D:/ALL SETUPS/Java Libraries jar files/rs2xml.jar!/src" />
+          <root url="jar://$MODULE_DIR$/../Java Libraries jar files/rs2xml.jar!/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC>
+          <root url="jar://$MODULE_DIR$/../jcalendar/jcalendar-1.4.zip!/doc/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../jcalendar/jcalendar-1.4.zip!/src" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/ALL SETUPS/Java Libraries jar files/h2-2.2.224.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jcalendar/lib/jcalendar-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
