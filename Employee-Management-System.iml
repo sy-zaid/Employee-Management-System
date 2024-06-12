@@ -36,10 +36,10 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jcalendar/lib/jcalendar-1.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Java Libraries jar files/jcalendar-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
